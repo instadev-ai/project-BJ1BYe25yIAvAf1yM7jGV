@@ -18,17 +18,17 @@ interface NavbarProps {
 const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={`flex h-14 items-center border-b px-4 w-full ${className}`}>
-      <div className="flex items-center gap-2">
-        <div className="relative">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+      <div className="flex items-center h-full">
+        <div className="relative h-full flex items-center">
+          <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"
             placeholder="Search..."
-            className="w-full rounded-md border bg-background pl-8 md:w-[200px] lg:w-[300px]"
+            className="w-full rounded-md border bg-background pl-8 md:w-[200px] lg:w-[300px] h-9"
           />
         </div>
       </div>
-      <div className="ml-auto flex items-center gap-4">
+      <div className="ml-auto flex items-center gap-4 h-full">
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="h-5 w-5" />
           <span className="absolute right-1 top-1 flex h-2 w-2 rounded-full bg-primary"></span>
