@@ -17,7 +17,7 @@ interface NavbarProps {
 
 const Navbar = ({ className }: NavbarProps) => {
   return (
-    <div className={`flex h-14 items-center border-b px-4 ${className}`}>
+    <div className={`flex h-14 items-center border-b px-4 w-full ${className}`}>
       <div className="flex items-center gap-2 md:w-64">
         <div className="relative w-full">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
