@@ -24,7 +24,7 @@ interface StatCardProps {
 
 const StatCard = ({ title, value, icon, change }: StatCardProps) => {
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium">{title}</CardTitle>
         <div className="h-4 w-4 text-muted-foreground">{icon}</div>
@@ -55,8 +55,8 @@ const StatCard = ({ title, value, icon, change }: StatCardProps) => {
 
 const DashboardContent = () => {
   return (
-    <div className="flex-1 w-full h-full">
-      <div className="px-6 py-6">
+    <div className="w-full h-full">
+      <div className="p-4">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
         </div>
@@ -68,7 +68,7 @@ const DashboardContent = () => {
             <TabsTrigger value="notifications">Notifications</TabsTrigger>
           </TabsList>
           <TabsContent value="overview" className="space-y-6 w-full">
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
               <StatCard
                 title="Total Revenue"
                 value="$45,231.89"
@@ -97,7 +97,7 @@ const DashboardContent = () => {
             
             <AnalyticsCharts />
             
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-7">
               <div className="col-span-4">
                 <ProductPerformance />
               </div>
@@ -108,7 +108,7 @@ const DashboardContent = () => {
           </TabsContent>
           
           <TabsContent value="analytics" className="space-y-4 w-full">
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               <Card className="col-span-1 md:col-span-2">
                 <CardHeader>
                   <CardTitle>Performance Analytics</CardTitle>
