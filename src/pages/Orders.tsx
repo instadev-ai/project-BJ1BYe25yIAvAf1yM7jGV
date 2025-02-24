@@ -39,13 +39,21 @@ import {
   Download, 
   Plus 
 } from "lucide-react";
-import PageHeader from "../layout/PageHeader";
+import PageHeader from "@/components/layout/PageHeader";
+
+interface Order {
+  id: string;
+  customer: string;
+  date: string;
+  amount: string;
+  status: string;
+}
 
 const OrdersPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   
   // Mock order data
-  const orders = [
+  const orders: Order[] = [
     {
       id: "ORD-001",
       customer: "Alex Johnson",
@@ -104,7 +112,7 @@ const OrdersPage = () => {
     },
   ];
 
-  const getStatusBadgeVariant = (status) => {
+  const getStatusBadgeVariant = (status: string) => {
     switch (status) {
       case "Completed":
         return "default";
