@@ -3,9 +3,11 @@ import OrdersPage from "./Orders";
 
 const OrdersPageWrapper = () => {
   return (
-    <DashboardLayout>
-      <OrdersPage />
-    </DashboardLayout>
+    <div className="w-full h-full">
+      <DashboardLayout>
+        <OrdersPage />
+      </DashboardLayout>
+    </div>
   );
 };
 
