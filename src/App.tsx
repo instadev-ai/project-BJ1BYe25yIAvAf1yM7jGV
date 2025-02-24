@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Index from './pages/Index';
 import NotFound from './pages/NotFound';
 import OrdersPageWrapper from './pages/OrdersPageWrapper';
-import './App.css';
+// Removed App.css import which was causing the container constraint
 
 function App() {
   return (
