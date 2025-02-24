@@ -1,17 +1,21 @@
 import Sidebar from "@/components/layout/Sidebar";
 import Navbar from "@/components/layout/Navbar";
-import DashboardContent from "@/components/dashboard/DashboardContent";
+import { SidebarInset } from "@/components/ui/sidebar";
 
-const DashboardLayout = () => {
+interface DashboardLayoutProps {
+  children: React.ReactNode;
+}
+
+const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
     <div className="flex h-screen bg-background">
       <Sidebar />
-      <div className="flex flex-1 flex-col">
+      <SidebarInset>
         <Navbar />
         <main className="flex-1 overflow-y-auto">
-          <DashboardContent />
+          {children}
         </main>
-      </div>
+      </SidebarInset>
     </div>
   );
 };
