@@ -17,10 +17,10 @@ interface NavbarProps {
 
 const Navbar = ({ className }: NavbarProps) => {
   return (
-    <div className={`flex h-14 items-center border-b px-4 w-full ${className}`}>
-      <div className="flex items-center h-full">
+    <div className={`flex h-14 items-center border-b w-full ${className}`}>
+      <div className="flex items-center h-full px-4">
         <div className="relative h-full flex items-center">
-          <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
+          <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"
             placeholder="Search..."
@@ -28,7 +28,7 @@ const Navbar = ({ className }: NavbarProps) => {
           />
         </div>
       </div>
-      <div className="ml-auto flex items-center gap-4 h-full">
+      <div className="ml-auto flex items-center gap-4 h-full pr-4">
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="h-5 w-5" />
           <span className="absolute right-1 top-1 flex h-2 w-2 rounded-full bg-primary"></span>
