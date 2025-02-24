@@ -34,7 +34,7 @@ const Sidebar = ({ className }: SidebarProps) => {
         className
       )}
     >
-      <div className="flex h-14 items-center border-b px-3">
+      <div className="flex h-14 items-center border-b px-4">
         <Link to="/" className="flex items-center gap-2 h-full">
           {!collapsed && (
             <span className="text-xl font-bold">StartupDash</span>
