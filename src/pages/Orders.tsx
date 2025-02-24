@@ -39,6 +39,7 @@ import {
   Download, 
   Plus 
 } from "lucide-react";
+import PageHeader from "../layout/PageHeader";
 
 const OrdersPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -124,14 +125,13 @@ const OrdersPage = () => {
   );
 
   return (
-    <div className="flex-1 space-y-4 p-4 md:p-8 pt-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold tracking-tight">Orders</h2>
+    <div className="flex-1 space-y-4 p-4">
+      <PageHeader title="Orders">
         <Button>
           <Plus className="mr-2 h-4 w-4" />
           New Order
         </Button>
-      </div>
+      </PageHeader>
       
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div className="flex w-full items-center space-x-2 md:w-auto">

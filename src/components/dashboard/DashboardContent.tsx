@@ -11,6 +11,7 @@ import {
 import AnalyticsCharts from "./AnalyticsCharts";
 import ProductPerformance from "./ProductPerformance";
 import TeamActivity from "./TeamActivity";
+import PageHeader from "../layout/PageHeader";
 
 interface StatCardProps {
   title: string;
@@ -57,9 +58,8 @@ const DashboardContent = () => {
   return (
     <div className="w-full h-full">
       <div className="p-4">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
-        </div>
+        <PageHeader title="Dashboard" />
+        
         <Tabs defaultValue="overview" className="w-full">
           <TabsList className="mb-4">
             <TabsTrigger value="overview">Overview</TabsTrigger>

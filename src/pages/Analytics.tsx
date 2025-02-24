@@ -4,6 +4,32 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Download, Calendar } from "lucide-react";
 
+interface MetricCardProps {
+  title: string;
+  value: string;
+  change: string;
+  positive: boolean;
+}
+
+const MetricCard = ({ title, value, change, positive }: MetricCardProps) => {
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <CardTitle className="text-sm font-medium">{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="text-2xl font-bold">{value}</div>
+        <p className="text-xs text-muted-foreground">
+          <span className={positive ? "text-green-500" : "text-red-500"}>
+            {change}
+          </span>{" "}
+          from last period
+        </p>
+      </CardContent>
+    </Card>
+  );
+};
+
 const Analytics = () => {
   return (
     <div className="w-full h-full">
@@ -173,7 +199,7 @@ const Analytics = () => {
                         <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
                           <div 
                             className="h-full bg-primary rounded-full" 
-                            style={{ width: item.percentage }}
+                            style={{ width: `${item.value}%` }}
                           ></div>
                         </div>
                       </div>
@@ -218,35 +244,35 @@ const Analytics = () => {
               </CardContent>
             </Card>
           </TabsContent>
+          
+          <TabsContent value="retention" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Retention Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="h-[400px] w-full bg-muted/20 rounded-md flex items-center justify-center">
+                  <p className="text-muted-foreground">Retention analysis data will appear here</p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
+          <TabsContent value="revenue" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Revenue Metrics</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="h-[400px] w-full bg-muted/20 rounded-md flex items-center justify-center">
+                  <p className="text-muted-foreground">Revenue metrics will appear here</p>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
         </Tabs>
       </div>
     </div>
-  );
-};
-
-interface MetricCardProps {
-  title: string;
-  value: string;
-  change: string;
-  positive: boolean;
-}
-
-const MetricCard = ({ title, value, change, positive }: MetricCardProps) => {
-  return (
-    <Card>
-      <CardHeader className="pb-2">
-        <CardTitle className="text-sm font-medium">{title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="text-2xl font-bold">{value}</div>
-        <p className="text-xs text-muted-foreground">
-          <span className={positive ? "text-green-500" : "text-red-500"}>
-            {change}
-          </span>{" "}
-          from last period
-        </p>
-      </CardContent>
-    </Card>
   );
 };
 
