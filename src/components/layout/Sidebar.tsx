@@ -2,11 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   BarChart3,
-  Users,
   ShoppingCart,
-  Settings,
-  LifeBuoy,
-  Package,
   Home,
   ChevronLeft,
   ChevronRight,
@@ -34,7 +30,7 @@ const Sidebar = ({ className }: SidebarProps) => {
         className
       )}
     >
-      <div className="flex h-14 items-center border-b px-4">
+      <div className="flex h-14 items-center border-b px-3">
         <Link to="/" className="flex items-center gap-2 h-full">
           {!collapsed && (
             <span className="text-xl font-bold">StartupDash</span>
@@ -70,39 +66,11 @@ const Sidebar = ({ className }: SidebarProps) => {
           active={location.pathname === "/analytics"}
         />
         <NavItem
-          to="/customers"
-          icon={<Users className="h-4 w-4" />}
-          label="Customers"
-          collapsed={collapsed}
-          active={location.pathname === "/customers"}
-        />
-        <NavItem
           to="/orders"
           icon={<ShoppingCart className="h-4 w-4" />}
           label="Orders"
           collapsed={collapsed}
           active={location.pathname === "/orders"}
-        />
-        <NavItem
-          to="/products"
-          icon={<Package className="h-4 w-4" />}
-          label="Products"
-          collapsed={collapsed}
-          active={location.pathname === "/products"}
-        />
-        <NavItem
-          to="/settings"
-          icon={<Settings className="h-4 w-4" />}
-          label="Settings"
-          collapsed={collapsed}
-          active={location.pathname === "/settings"}
-        />
-        <NavItem
-          to="/support"
-          icon={<LifeBuoy className="h-4 w-4" />}
-          label="Support"
-          collapsed={collapsed}
-          active={location.pathname === "/support"}
         />
       </nav>
     </div>

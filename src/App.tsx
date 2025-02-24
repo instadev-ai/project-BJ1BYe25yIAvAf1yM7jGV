@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Index from './pages/Index';
 import NotFound from './pages/NotFound';
 import OrdersPageWrapper from './pages/OrdersPageWrapper';
+import AnalyticsPageWrapper from './pages/AnalyticsPageWrapper';
 // Removed App.css import which was causing the container constraint
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/orders" element={<OrdersPageWrapper />} />
+          <Route path="/analytics" element={<AnalyticsPageWrapper />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />
