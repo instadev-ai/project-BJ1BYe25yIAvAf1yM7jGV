@@ -29,7 +29,7 @@ const Sidebar = ({ className }: SidebarProps) => {
   return (
     <div
       className={cn(
-        "flex h-screen flex-col border-r bg-background transition-all duration-300",
+        "h-screen flex-col border-r bg-background transition-all duration-300",
         collapsed ? "w-16" : "w-64",
         className
       )}

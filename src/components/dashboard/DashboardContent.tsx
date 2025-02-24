@@ -55,8 +55,8 @@ const StatCard = ({ title, value, icon, change }: StatCardProps) => {
 
 const DashboardContent = () => {
   return (
-    <div className="flex-1 w-full">
-      <div className="px-4 py-6 md:px-6 lg:px-8">
+    <div className="flex-1 w-full h-full">
+      <div className="px-6 py-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
         </div>
